@@ -10,7 +10,14 @@ const dayEnd = "17:45"
 
 function scheduleMeeting(startTime, durationMinutes) {
 
-    if(startTime === undefined || durationMinutes === undefined) return false
+    if(
+        startTime === undefined ||
+        durationMinutes === undefined
+    ) {
+        return false
+    }
+
+    durationMinutes = Number(durationMinutes)
 
     const dayStartInMinutes = twentyfourfourformatToMinutes(dayStart)
     const dayEndInMinutes = twentyfourfourformatToMinutes(dayEnd)
